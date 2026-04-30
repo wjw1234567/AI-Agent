@@ -5,8 +5,8 @@ from azure.ai.inference.models import SystemMessage, UserMessage,AssistantMessag
 from azure.core.credentials import AzureKeyCredential
 
 endpoint = "https://models.github.ai/inference"
-# model = "deepseek/DeepSeek-V3-0324"
-model="openai/gpt-4.1"
+model = "deepseek/DeepSeek-V3-0324"
+# model="openai/gpt-4.1"
 token = os.environ["GITHUB_TOKEN"]
 # print(token)
 
@@ -17,7 +17,7 @@ client = ChatCompletionsClient(
 
 
 messages = [
-    SystemMessage("你是一个电商从业者，专业、简洁、有用地回答电商相关问题")
+    SystemMessage("你是一个资深AI agent开发工程师，专业、简洁、有用地回答相关技术问题")
 ]
 
 # 🔴 新增：总 token 统计
